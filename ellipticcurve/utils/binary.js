@@ -1,5 +1,5 @@
 const BigInt = require("big-integer");
-const _Buffer = Buffer ? Buffer  : require("buffer/");
+const _Buffer = typeof Buffer === 'undefined' ? Buffer  : require("buffer/");
 
 var hexFromBinary = function (data) {
     // Return the hexadecimal representation of the binary data. Every byte of data is converted into the
