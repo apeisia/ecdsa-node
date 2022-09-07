@@ -2,7 +2,7 @@ const Base64 = require("./base");
 const BinaryAscii = require("./binary");
 const modulo = require("./integer").modulo;
 const BigInt = require("big-integer");
-const _Buffer = typeof Buffer !== 'undefined' ? Buffer  : require("buffer/");
+const _Buffer = typeof Buffer !== 'undefined' ? Buffer  : require("buffer/").Buffer;
 
 
 const hexAt = "\x00";
