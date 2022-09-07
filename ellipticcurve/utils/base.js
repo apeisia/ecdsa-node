@@ -1,8 +1,11 @@
+
+const _Buffer = Buffer ? Buffer  : require("buffer/");
+
 exports.decode = function (string) {
-    return Buffer.from(string, "base64").toString("binary");
+    return _Buffer.from(string, "base64").toString("binary");
 };
 
 
 exports.encode = function (string) {
-    return Buffer.from(string, "binary").toString("base64");
+    return _Buffer.from(string, "binary").toString("base64");
 };

@@ -1,5 +1,5 @@
 const BigInt = require("big-integer");
-
+const _Buffer = Buffer ? Buffer  : require("buffer/");
 
 var hexFromBinary = function (data) {
     // Return the hexadecimal representation of the binary data. Every byte of data is converted into the
@@ -8,7 +8,7 @@ var hexFromBinary = function (data) {
     // :param data: binary
     // :return: hexadecimal string
 
-    return Buffer.from(data, "binary").toString("hex");
+    return _Buffer.from(data, "binary").toString("hex");
 }
 
 
@@ -19,7 +19,7 @@ var binaryFromHex = function (data) {
     // :param data: hexadecimal string
     // :return: binary
 
-    return Buffer.from(data, "hex").toString('binary');
+    return _Buffer.from(data, "hex").toString('binary');
 }
 
 

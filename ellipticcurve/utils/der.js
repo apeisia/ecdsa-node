@@ -2,6 +2,7 @@ const Base64 = require("./base");
 const BinaryAscii = require("./binary");
 const modulo = require("./integer").modulo;
 const BigInt = require("big-integer");
+const _Buffer = Buffer ? Buffer  : require("buffer/");
 
 
 const hexAt = "\x00";
@@ -17,11 +18,11 @@ const hex129 = 0xa0;
 const hex160 = 0x80;
 const hex224 = 0xe0;
 
-const bytesHex0 = Buffer.from(hex0).toString('binary');
-const bytesHexB = Buffer.from(hexB).toString('binary');
-const bytesHexC = Buffer.from(hexC).toString('binary');
-const bytesHexD = Buffer.from(hexD).toString('binary');
-const bytesHexF = Buffer.from(hexF).toString('binary');
+const bytesHex0 = _Buffer.from(hex0).toString('binary');
+const bytesHexB = _Buffer.from(hexB).toString('binary');
+const bytesHexC = _Buffer.from(hexC).toString('binary');
+const bytesHexD = _Buffer.from(hexD).toString('binary');
+const bytesHexF = _Buffer.from(hexF).toString('binary');
 
 
 exports.encodeSequence = function () {
