@@ -9,4 +9,4 @@
 !/README.md
 !/package.json
 !/ellipticcurve/**/*
-!/types
+!/types/**/*
